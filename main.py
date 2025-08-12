@@ -1,1 +1,8 @@
-from flask import Flask
+import fastapi
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def index():
+    return { "name" : "First Data"}
