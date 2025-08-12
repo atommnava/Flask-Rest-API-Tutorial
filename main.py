@@ -1,3 +1,5 @@
+# uvicorn main:app --reload
+
 import fastapi
 from fastapi import FastAPI
 
