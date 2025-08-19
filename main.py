@@ -15,7 +15,8 @@ def get_item(item_id: int = Path(description="The ID of the Item you want to vie
     return inventory[item_id]
 
 @app.get("/get-by-name")
-def get_by_name(*, name: Optional[str] = None, test: int):
+# def get_by_name(*, name: Optional[str] = None, test: int): DESACTUALIZADO
+def get_by_name(*, name: str | None = None, test: int):
     for item_id in inventory:
         if inventory[item_id]["name"] == name:
             return inventory[item_id]
